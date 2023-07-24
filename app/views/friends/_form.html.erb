@@ -1,0 +1,51 @@
+<%= form_with model: friend, url: url do |form| %>
+
+
+
+<div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% friend.errors.full_messages_for(:first_name).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
+    <% friend.errors.full_messages_for(:last_name).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+
+
+
+<div>
+    <%= form.label :phone_number %><br>
+    <%= form.text_field :phone_number %>
+    <% friend.errors.full_messages_for(:phone_number).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+
+
+<div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+    <% friend.errors.full_messages_for(:email).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+<div>
+    <%= form.label :twitter_handle %><br>
+    <%= form.text_field :twitter_handle %>
+    <% friend.errors.full_messages_for(:twitter_handle).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+
+
+
+<div>
+    <%= form.submit %>
+</div>
+<% end %>

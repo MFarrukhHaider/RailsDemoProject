@@ -1,0 +1,15 @@
+<h1> Specific Friend</h1>
+
+
+<%= @friend.first_name%>
+<%= @friend.last_name%>
+<%= @friend.phone_number%>
+<%= @friend.email%>
+<%= @friend.twitter_handle%>
+
+<ul>
+  <li><%= link_to "Edit", "/friends_edit/#{@friend.id}" %></li>
+  <li><%= link_to "Show", "/friends_show/#{@friend.id}" %></li>
+
+
+</ul>

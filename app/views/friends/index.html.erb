@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Friends List</title>
+</head>
+<body>
+  <h1>Friends List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Phone Number</th>
+        <th>Twitter Handle</th>
+        <th>Edit Friend Link</th>
+        <th>Show Friend Link</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone_number %></td>
+          <td><%= friend.twitter_handle %></td>
+          <td><%= link_to "Edit Record", "/friends_edit/#{friend.id}"%></td>
+          <td><%= link_to "Show Record", "/friends_show/#{friend.id}"%></td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+
+
+<%= link_to "New Friend", new_friend_path %>
